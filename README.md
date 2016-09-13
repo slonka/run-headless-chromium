@@ -26,6 +26,18 @@ by sending the magic string `console.log("All tests completed!");`.
 Insert an integer at the end of the string to change the exit code of this program from 0 to
 some other integer within the 0 - 255 range.
 
+### Docker
+
+```bash
+docker build -t run-headless-chromium .
+
+docker run -it run-headless-chromium /bin/bash
+
+./test.sh
+```
+
+Doesn't work without `--no-sandbox` option
+
 ## Example
 Headless Chromium is ideal for unit testing, e.g. with [Jasmine](http://jasmine.github.io/):
 
